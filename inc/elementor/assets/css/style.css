@@ -1,0 +1,32 @@
+.airi-icon_box_wrapper {
+  text-align: center;
+}
+.airi-icon_box_wrapper.layout-2 {
+  position: relative;
+}
+.airi-icon_box_wrapper.layout-2 .icon {
+  position: absolute;
+  right: 7px;
+  top: 57%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.airi-icon_box_wrapper.layout-2 .icon i {
+  font-size: 70px;
+}
+.airi-icon_box_wrapper.layout-2 h3 {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 600;
+  margin-right: 17px;
+  margin-bottom: 0;
+}
+.airi-icon_box_wrapper.layout-2 .desciption {
+  position: relative;
+  display: inline-block;
+}
+.airi-icon_box_wrapper.layout-2 .desciption .content {
+  text-align: left;
+  z-index: 10;
+  position: relative;
+}
