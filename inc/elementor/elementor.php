@@ -51,9 +51,9 @@ if ( ! class_exists( 'TZ_Elementor_Widgets' ) )
 		public function widget_categories(  $elements_manager )
 		{
 			$elements_manager->add_category(
-				'wpf-category',
+				'bandq',
 				[
-					'title' => __( 'WPF', 'wpf_domain' ),
+					'title' => __( 'BANDQ', 'bandq' ),
 					'icon' => 'fa fa-plug',
 				]
 			);
@@ -77,7 +77,7 @@ if ( ! class_exists( 'TZ_Elementor_Widgets' ) )
 		public function init_widgets( $widgets_manager ) {
 
 //			// Include Widget files
-			require_once( TZ_TF_ELEMENTOR_PATH . 'widgets/icon-box/icon-box.php' );
+			require_once( TZ_TF_ELEMENTOR_PATH . 'widgets/team/team.php' );
 
 		}
 
@@ -87,9 +87,9 @@ if ( ! class_exists( 'TZ_Elementor_Widgets' ) )
 
 			$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-				esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'wpf_domain' ),
-				'<strong>' . esc_html__( 'Elementor Test Extension', 'wpf_domain' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', 'wpf_domain' ) . '</strong>'
+				esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'bandq' ),
+				'<strong>' . esc_html__( 'Elementor Test Extension', 'bandq' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'bandq' ) . '</strong>'
 			);
 
 			printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
