@@ -104,7 +104,6 @@ class Band_Team_Widget extends Widget_Base
             [
                 'label' => __('Name', 'bandq'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Tab Title', 'bandq'),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -156,17 +155,6 @@ class Band_Team_Widget extends Widget_Base
             ]
         );
 
-        $this->add_control(
-            'hide_pagination',
-            [
-                'label'    => esc_html__('Hide Pagination', 'bandq'),
-                'type'    =>    Controls_Manager::SWITCHER,
-                'default'    =>    '',
-                'condition' =>  [
-                    'layout'    =>  ['layout-1']
-                ]
-            ]
-        );
     }
 
     private function tab_style()

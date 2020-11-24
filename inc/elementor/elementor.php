@@ -78,7 +78,7 @@ if ( ! class_exists( 'TZ_Elementor_Widgets' ) )
 
 //			// Include Widget files
 			require_once( TZ_TF_ELEMENTOR_PATH . 'widgets/team/team.php' );
-
+			require_once( TZ_TF_ELEMENTOR_PATH . 'widgets/video-button/video-button.php' );
 		}
 
 		public function admin_notice_missing_main_plugin() {

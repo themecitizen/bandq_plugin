@@ -69,7 +69,6 @@ function tz_tf_add_control_to_icon_box( $element, $args )
 	);
 	$element->end_injection();
 }
-add_action( 'elementor/element/icon-box/section_style_icon/before_section_end', 'butler_add_control_to_icon_box', 10,2);
 
 /* New Icon Control */
 class TZ_Flaticon_Control extends \Elementor\Base_Data_Control {
