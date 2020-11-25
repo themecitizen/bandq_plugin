@@ -4,12 +4,11 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Scheme_Color;
 use Elementor\Group_Control_Box_Shadow;
-use Elementor\Repeater;
 use Elementor\Group_Control_Typography;
 use Elementor\Scheme_Typography;
 use Elementor\Utils;
 
-class Band_Team_Widget extends Widget_Base
+class Band_Step_Widget extends Widget_Base
 {
 
     /**
@@ -24,12 +23,12 @@ class Band_Team_Widget extends Widget_Base
      */
     public function get_name()
     {
-        return 'bandq_team';
+        return 'bandq_step';
     }
 
     public function get_title()
     {
-        return __('Team', 'bandq');
+        return __('Bandq Step', 'bandq');
     }
 
     public function get_icon()
@@ -83,12 +82,11 @@ class Band_Team_Widget extends Widget_Base
 
     private function tab_content_layout1()
     {
-        $repeater = new Repeater();
 
-        $repeater->add_control(
-            'image',
+        $this->add_control(
+            'image1',
             [
-                'label' => __('Choose Image', 'bandq'),
+                'label' => __('Step 1 Image', 'bandq'),
                 'type' => Controls_Manager::MEDIA,
                 'dynamic' => [
                     'active' => true,
@@ -99,24 +97,11 @@ class Band_Team_Widget extends Widget_Base
             ]
         );
 
-        $repeater->add_control(
-            'member_name',
+        $this->add_control(
+            'info1',
             [
-                'label' => __('Name', 'bandq'),
-                'type' => Controls_Manager::TEXT,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'label_block' => true,
-            ]
-        );
-
-        $repeater->add_control(
-            'member_info',
-            [
-                'label' => __('Information', 'bandq'),
+                'label' => __('Step 1 Information', 'bandq'),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __('Tab Title', 'bandq'),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -125,36 +110,108 @@ class Band_Team_Widget extends Widget_Base
         );
 
         $this->add_control(
-            'list_members',
+            'image2',
             [
-                'label' => __('Members', 'bandq'),
-                'type' => Controls_Manager::REPEATER,
-                'fields' => $repeater->get_controls(),
-                'default' => [
-                    [
-                        'member_name' => __('Member #1', 'bandq'),
-                        'member_info' => __('Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bandq'),
-                    ],
+                'label' => __('Step 2 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
                 ],
-                'title_field' => '{{{ member_name }}}',
-                'condition' =>    [
-                    'layout'    =>  ['layout-1']
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
                 ]
             ]
         );
 
         $this->add_control(
-            'carousel_autoplay',
+            'info2',
             [
-                'label'    => esc_html__('Autoplay', 'bandq'),
-                'type'    =>    Controls_Manager::SWITCHER,
-                'default'    =>    '',
-                'condition' =>  [
-                    'layout'    =>  ['layout-1']
+                'label' => __('Step 2 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'image3',
+            [
+                'label' => __('Step 3 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
                 ]
             ]
         );
 
+        $this->add_control(
+            'info3',
+            [
+                'label' => __('Step 3 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'image4',
+            [
+                'label' => __('Step 4 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'info4',
+            [
+                'label' => __('Step 4 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'image5',
+            [
+                'label' => __('Step 5 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
+
+        $this->add_control(
+            'info5',
+            [
+                'label' => __('Step 5 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
     }
 
     private function tab_style()
@@ -289,4 +346,4 @@ class Band_Team_Widget extends Widget_Base
     }
 }
 
-$widgets_manager->register_widget_type(new \Band_Team_Widget());
+$widgets_manager->register_widget_type(new \Band_Step_Widget());
