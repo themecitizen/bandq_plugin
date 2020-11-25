@@ -1,4 +1,9 @@
-<div class="bandp-team-container <?php echo esc_attr($settings['layout']); ?>" >
+<?php
+use Elementor\Group_Control_Image_Size;
+use Elementor\Control_Media;
+use Elementor\Plugin;
+?>
+<div class="bandp-step-container <?php echo esc_attr($settings['layout']); ?>" >
     <div class="carousel">
         <?php
         if ($settings['list_members']) {
@@ -28,5 +33,23 @@
             }
         }
         ?>
+    </div>
+    <div class="top-row d-flex">
+        <?php
+        $image = $settings["image1"];
+        $info = $settings["info1"];
+        $image_url = Group_Control_Image_Size::get_attachment_image_src( $image['id'], 'image_size', $settings );
+        $image_html = '<img src="' . esc_attr( $image_url ) . '" alt="' . esc_attr( Control_Media::get_image_alt( $image ) ) . '" />';
+        ?>
+        <div class="box">
+            <div class="image">
+            <?php
+            echo $image_html;
+            ?>
+            </div>
+            <div class="information">
+                <?php echo wp_kses_post($info);?>
+            </div>
+        </div>
     </div>
 </div>

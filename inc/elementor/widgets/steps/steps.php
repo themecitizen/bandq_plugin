@@ -33,7 +33,7 @@ class Band_Step_Widget extends Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-person';
+        return 'eicon-icon-box';
     }
 
     public function get_categories()
@@ -109,109 +109,109 @@ class Band_Step_Widget extends Widget_Base
             ]
         );
 
-        $this->add_control(
-            'image2',
-            [
-                'label' => __('Step 2 Image', 'bandq'),
-                'type' => Controls_Manager::MEDIA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => Utils::get_placeholder_image_src(),
-                ]
-            ]
-        );
+        // $this->add_control(
+        //     'image2',
+        //     [
+        //         'label' => __('Step 2 Image', 'bandq'),
+        //         'type' => Controls_Manager::MEDIA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'default' => [
+        //             'url' => Utils::get_placeholder_image_src(),
+        //         ]
+        //     ]
+        // );
 
-        $this->add_control(
-            'info2',
-            [
-                'label' => __('Step 2 Information', 'bandq'),
-                'type' => Controls_Manager::TEXTAREA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'label_block' => true,
-            ]
-        );
+        // $this->add_control(
+        //     'info2',
+        //     [
+        //         'label' => __('Step 2 Information', 'bandq'),
+        //         'type' => Controls_Manager::TEXTAREA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'label_block' => true,
+        //     ]
+        // );
 
-        $this->add_control(
-            'image3',
-            [
-                'label' => __('Step 3 Image', 'bandq'),
-                'type' => Controls_Manager::MEDIA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => Utils::get_placeholder_image_src(),
-                ]
-            ]
-        );
+        // $this->add_control(
+        //     'image3',
+        //     [
+        //         'label' => __('Step 3 Image', 'bandq'),
+        //         'type' => Controls_Manager::MEDIA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'default' => [
+        //             'url' => Utils::get_placeholder_image_src(),
+        //         ]
+        //     ]
+        // );
 
-        $this->add_control(
-            'info3',
-            [
-                'label' => __('Step 3 Information', 'bandq'),
-                'type' => Controls_Manager::TEXTAREA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'label_block' => true,
-            ]
-        );
+        // $this->add_control(
+        //     'info3',
+        //     [
+        //         'label' => __('Step 3 Information', 'bandq'),
+        //         'type' => Controls_Manager::TEXTAREA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'label_block' => true,
+        //     ]
+        // );
 
-        $this->add_control(
-            'image4',
-            [
-                'label' => __('Step 4 Image', 'bandq'),
-                'type' => Controls_Manager::MEDIA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => Utils::get_placeholder_image_src(),
-                ]
-            ]
-        );
+        // $this->add_control(
+        //     'image4',
+        //     [
+        //         'label' => __('Step 4 Image', 'bandq'),
+        //         'type' => Controls_Manager::MEDIA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'default' => [
+        //             'url' => Utils::get_placeholder_image_src(),
+        //         ]
+        //     ]
+        // );
 
-        $this->add_control(
-            'info4',
-            [
-                'label' => __('Step 4 Information', 'bandq'),
-                'type' => Controls_Manager::TEXTAREA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'label_block' => true,
-            ]
-        );
+        // $this->add_control(
+        //     'info4',
+        //     [
+        //         'label' => __('Step 4 Information', 'bandq'),
+        //         'type' => Controls_Manager::TEXTAREA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'label_block' => true,
+        //     ]
+        // );
 
-        $this->add_control(
-            'image5',
-            [
-                'label' => __('Step 5 Image', 'bandq'),
-                'type' => Controls_Manager::MEDIA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => [
-                    'url' => Utils::get_placeholder_image_src(),
-                ]
-            ]
-        );
+        // $this->add_control(
+        //     'image5',
+        //     [
+        //         'label' => __('Step 5 Image', 'bandq'),
+        //         'type' => Controls_Manager::MEDIA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'default' => [
+        //             'url' => Utils::get_placeholder_image_src(),
+        //         ]
+        //     ]
+        // );
 
-        $this->add_control(
-            'info5',
-            [
-                'label' => __('Step 5 Information', 'bandq'),
-                'type' => Controls_Manager::TEXTAREA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'label_block' => true,
-            ]
-        );
+        // $this->add_control(
+        //     'info5',
+        //     [
+        //         'label' => __('Step 5 Information', 'bandq'),
+        //         'type' => Controls_Manager::TEXTAREA,
+        //         'dynamic' => [
+        //             'active' => true,
+        //         ],
+        //         'label_block' => true,
+        //     ]
+        // );
     }
 
     private function tab_style()
