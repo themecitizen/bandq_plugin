@@ -2,6 +2,7 @@
 use Elementor\Group_Control_Image_Size;
 use Elementor\Control_Media;
 use Elementor\Plugin;
+
 ?>
 <div class="bandp-step-container <?php echo esc_attr($settings['layout']); ?>" >
     <div class="carousel">
@@ -36,20 +37,60 @@ use Elementor\Plugin;
     </div>
     <div class="top-row d-flex">
         <?php
-        $image = $settings["image1"];
-        $info = $settings["info1"];
-        $image_url = Group_Control_Image_Size::get_attachment_image_src( $image['id'], 'image_size', $settings );
-        $image_html = '<img src="' . esc_attr( $image_url ) . '" alt="' . esc_attr( Control_Media::get_image_alt( $image ) ) . '" />';
-        ?>
-        <div class="box">
-            <div class="image">
-            <?php
-            echo $image_html;
+        for ($i = 1; $i <= 3; $i++) {
+            $image = $settings["image{$i}"];
+            $info = $settings["info{$i}"];
+            $image_url = Group_Control_Image_Size::get_attachment_image_src($image['id'], 'image_size', $settings);
+            $image_html = '<img src="' . esc_attr($image_url) . '" alt="' . esc_attr(Control_Media::get_image_alt($image)) . '" />'; 
+            $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_1.png';
+            if($i ===3) {
+                $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_2.png';
+            }
             ?>
+            
+            <div class="box box-<?php echo $i; ?>">
+                <div class="icon">
+                    <img src="<?php echo $icon_url; ?>" alt="icon" />
+                </div>
+                <div class="image">
+                <?php
+                echo $image_html; ?>
+                </div>
+                <div class="information">
+                    <?php echo wp_kses_post($info); ?>
+                </div>
             </div>
-            <div class="information">
-                <?php echo wp_kses_post($info);?>
+            <?php
+        }
+        ?>
+    </div>
+    <div class="bottom-row d-flex">
+        <?php
+        for ($i = 4; $i <= 5; $i++) {
+            $image = $settings["image{$i}"];
+            $info = $settings["info{$i}"];
+            $image_url = Group_Control_Image_Size::get_attachment_image_src($image['id'], 'image_size', $settings);
+            $image_html = '<img src="' . esc_attr($image_url) . '" alt="' . esc_attr(Control_Media::get_image_alt($image)) . '" />'; 
+            $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_3.png';
+            $icon_class = "d-none";
+            if($i == 5) {
+                $icon_class = "";
+            }
+            ?>
+            <div class="box box-<?php echo $i; ?>">
+                <div class="icon <?php echo $icon_class; ?>">
+                    <img src="<?php echo $icon_url; ?>" alt="icon" />
+                </div>
+                <div class="image">
+                <?php
+                echo $image_html; ?>
+                </div>
+                <div class="information">
+                    <?php echo wp_kses_post($info); ?>
+                </div>
             </div>
-        </div>
+            <?php
+        }
+        ?>
     </div>
 </div>

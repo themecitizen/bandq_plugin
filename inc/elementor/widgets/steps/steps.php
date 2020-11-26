@@ -109,109 +109,109 @@ class Band_Step_Widget extends Widget_Base
             ]
         );
 
-        // $this->add_control(
-        //     'image2',
-        //     [
-        //         'label' => __('Step 2 Image', 'bandq'),
-        //         'type' => Controls_Manager::MEDIA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'default' => [
-        //             'url' => Utils::get_placeholder_image_src(),
-        //         ]
-        //     ]
-        // );
+        $this->add_control(
+            'image2',
+            [
+                'label' => __('Step 2 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
 
-        // $this->add_control(
-        //     'info2',
-        //     [
-        //         'label' => __('Step 2 Information', 'bandq'),
-        //         'type' => Controls_Manager::TEXTAREA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'label_block' => true,
-        //     ]
-        // );
+        $this->add_control(
+            'info2',
+            [
+                'label' => __('Step 2 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
 
-        // $this->add_control(
-        //     'image3',
-        //     [
-        //         'label' => __('Step 3 Image', 'bandq'),
-        //         'type' => Controls_Manager::MEDIA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'default' => [
-        //             'url' => Utils::get_placeholder_image_src(),
-        //         ]
-        //     ]
-        // );
+        $this->add_control(
+            'image3',
+            [
+                'label' => __('Step 3 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
 
-        // $this->add_control(
-        //     'info3',
-        //     [
-        //         'label' => __('Step 3 Information', 'bandq'),
-        //         'type' => Controls_Manager::TEXTAREA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'label_block' => true,
-        //     ]
-        // );
+        $this->add_control(
+            'info3',
+            [
+                'label' => __('Step 3 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
 
-        // $this->add_control(
-        //     'image4',
-        //     [
-        //         'label' => __('Step 4 Image', 'bandq'),
-        //         'type' => Controls_Manager::MEDIA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'default' => [
-        //             'url' => Utils::get_placeholder_image_src(),
-        //         ]
-        //     ]
-        // );
+        $this->add_control(
+            'image4',
+            [
+                'label' => __('Step 4 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
 
-        // $this->add_control(
-        //     'info4',
-        //     [
-        //         'label' => __('Step 4 Information', 'bandq'),
-        //         'type' => Controls_Manager::TEXTAREA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'label_block' => true,
-        //     ]
-        // );
+        $this->add_control(
+            'info4',
+            [
+                'label' => __('Step 4 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
 
-        // $this->add_control(
-        //     'image5',
-        //     [
-        //         'label' => __('Step 5 Image', 'bandq'),
-        //         'type' => Controls_Manager::MEDIA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'default' => [
-        //             'url' => Utils::get_placeholder_image_src(),
-        //         ]
-        //     ]
-        // );
+        $this->add_control(
+            'image5',
+            [
+                'label' => __('Step 5 Image', 'bandq'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ]
+            ]
+        );
 
-        // $this->add_control(
-        //     'info5',
-        //     [
-        //         'label' => __('Step 5 Information', 'bandq'),
-        //         'type' => Controls_Manager::TEXTAREA,
-        //         'dynamic' => [
-        //             'active' => true,
-        //         ],
-        //         'label_block' => true,
-        //     ]
-        // );
+        $this->add_control(
+            'info5',
+            [
+                'label' => __('Step 5 Information', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
     }
 
     private function tab_style()
@@ -233,93 +233,13 @@ class Band_Step_Widget extends Widget_Base
         );
 
         $this->add_control(
-            'member_job_color',
+            'text_color',
             [
-                'label' => __('Job Color', 'bandq'),
+                'label' => __('Text Color', 'bandq'),
                 'type' => Controls_Manager::COLOR,
-                'default'   =>  '#32c788',
+                'default'   =>  '#081734',
                 'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .job-info' => 'color: {{VALUE}};',
-                ],
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'member_name_color',
-            [
-                'label' => __('Name Color', 'bandq'),
-                'type' => Controls_Manager::COLOR,
-                'default'   =>  '#19274d',
-                'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .member-info h3' => 'color: {{VALUE}};',
-                ],
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'member_circle_1_color',
-            [
-                'label' => __('Circle 1 Background Color', 'bandq'),
-                'type' => Controls_Manager::COLOR,
-                'default'   =>  '#e2fff3',
-                'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .cirlces .circle-one' => 'background-color: {{VALUE}};',
-                ],
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'member_circle_2_color',
-            [
-                'label' => __('Circle 2 Background Color', 'bandq'),
-                'type' => Controls_Manager::COLOR,
-                'default'   =>  '#32c788',
-                'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .cirlces .circle-two' => 'background-color: {{VALUE}};',
-                ],
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'member_social_btn_color',
-            [
-                'label' => __('Button Social Color', 'bandq'),
-                'type' => Controls_Manager::COLOR,
-                'default'   =>  '#fff',
-                'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .member-info .social-outer-box .plus' => 'color: {{VALUE}};',
-                ],
-                'scheme' => [
-                    'type' => Scheme_Color::get_type(),
-                    'value' => Scheme_Color::COLOR_1,
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'member_social_btn_bg_color',
-            [
-                'label' => __('Button Social Color', 'bandq'),
-                'type' => Controls_Manager::COLOR,
-                'default'   =>  '#32c788',
-                'selectors' => [
-                    '{{WRAPPER}} .bandq-team-container.layout-1 .bandq-team .inner-box .member-info .social-outer-box .plus' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .bandp-step-container .box' => 'color: {{VALUE}};',
                 ],
                 'scheme' => [
                     'type' => Scheme_Color::get_type(),
