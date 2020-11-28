@@ -129,17 +129,6 @@ class Band_Testimonial_Widget extends Widget_Base
             ]
         );
 
-        $this->add_control(
-            'carousel_autoplay',
-            [
-                'label'    => esc_html__('Autoplay', 'bandq'),
-                'type'    =>    Controls_Manager::SWITCHER,
-                'default'    =>    '',
-                'condition' =>  [
-                    'layout'    =>  ['layout-1']
-                ]
-            ]
-        );
     }
 
     private function tab_style()
