@@ -15,7 +15,7 @@
                     slidesToScroll: 1,
                     infinite: true,
                     swipeToSlide: true,
-                    autoplay: false
+                    autoplay: true
                 });
             }
         }
