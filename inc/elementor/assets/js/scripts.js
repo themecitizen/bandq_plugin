@@ -131,5 +131,16 @@
                 elementorFrontend.hooks.addAction('frontend/element_ready/bandq_testimonial.default', testimonials);
             }
         });
+
+        $(window).scroll(function () {
+            if ($('.page').hasClass('page-id-145')) {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > $('.site-header').height()) {
+                    $('.site-header').css('background-color', '#081734');
+                } else {
+                    $('.site-header').css('background-color', 'unset');
+                }
+            }
+        });
     }
 )( jQuery );
