@@ -94,3 +94,19 @@ function tz_addons_recurse_parse_args( $args, $default = array() ) {
 
 	return $result;
 }
+
+if (! function_exists('bandq_get_post_categories')) {
+    /**
+     * Function get list blog categories
+     * @return $term Term quots terms
+     */
+    function bandq_get_post_categories()
+    {
+        $cats = array();
+        $terms = get_categories();
+        foreach ($terms as $term) {
+            $cats[ $term->slug ] = $term->name;
+        }
+        return $cats;
+    }
+}
