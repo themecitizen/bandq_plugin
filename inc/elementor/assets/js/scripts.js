@@ -58,6 +58,30 @@
                     ]
                 });
             }
+
+            if ($container.hasClass('layout-2')) {
+                var $slide = $scope.find('.carousel');
+                $slide.not('.slick-initialized').slick({
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    swipeToSlide: true,
+                    autoplay: false,
+                    responsive: [
+                        {
+                            breakpoint: 577,
+                            settings: {
+                                slidesToShow: 1,
+                                centerMode: false,
+                                autoplay: true,
+                                dots: true,
+                            }
+                        }
+                    ]
+                });
+            }
         }
 
         var slider = function ($scope, $) {
