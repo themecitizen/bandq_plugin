@@ -73,6 +73,7 @@ class Band_Team_Widget extends Widget_Base
                 'default'   =>  'layout-1',
                 'options'   =>  [
                     'layout-1'  =>  esc_html__('Layout 1', 'bandq'),
+                    'layout-2'  =>  esc_html__('Layout 2', 'bandq'),
                 ]
             ]
         );
@@ -124,6 +125,32 @@ class Band_Team_Widget extends Widget_Base
             ]
         );
 
+        $repeater->add_control(
+            'member_info_2',
+            [
+                'label' => __('Information 2', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'default' => __('Tab Title', 'bandq'),
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
+
+        $repeater->add_control(
+            'member_info_3',
+            [
+                'label' => __('Information 3', 'bandq'),
+                'type' => Controls_Manager::TEXTAREA,
+                'default' => __('Tab Title', 'bandq'),
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'label_block' => true,
+            ]
+        );
+
         $this->add_control(
             'list_members',
             [
@@ -138,7 +165,7 @@ class Band_Team_Widget extends Widget_Base
                 ],
                 'title_field' => '{{{ member_name }}}',
                 'condition' =>    [
-                    'layout'    =>  ['layout-1']
+                    'layout'    =>  ['layout-1', 'layout-2']
                 ]
             ]
         );
@@ -150,7 +177,7 @@ class Band_Team_Widget extends Widget_Base
                 'type'    =>    Controls_Manager::SWITCHER,
                 'default'    =>    '',
                 'condition' =>  [
-                    'layout'    =>  ['layout-1']
+                    'layout'    =>  ['layout-1', 'layout-2']
                 ]
             ]
         );
