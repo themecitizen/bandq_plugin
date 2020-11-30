@@ -47,10 +47,9 @@
                     autoplay: false,
                     responsive: [
                         {
-                            breakpoint: 639,
+                            breakpoint: 767,
                             settings: {
                                 slidesToShow: 1,
-                                centerMode: false,
                                 autoplay: true,
                                 dots: true,
                             }

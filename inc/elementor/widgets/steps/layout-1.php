@@ -43,6 +43,7 @@ use Elementor\Plugin;
             $image_url = Group_Control_Image_Size::get_attachment_image_src($image['id'], 'image_size', $settings);
             $image_html = '<img src="' . esc_attr($image_url) . '" alt="' . esc_attr(Control_Media::get_image_alt($image)) . '" />'; 
             $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_1.png';
+            $icon_mb_url = TZ_TF_ELEMENTOR_URL . "/assets/img/foot_mb_{$i}.png";
             if($i ===3) {
                 $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_2.png';
             }
@@ -51,6 +52,9 @@ use Elementor\Plugin;
             <div class="box box-<?php echo $i; ?>">
                 <div class="icon">
                     <img src="<?php echo $icon_url; ?>" alt="icon" />
+                </div>
+                <div class="icon-mobile">
+                    <img src="<?php echo $icon_mb_url; ?>" alt="icon-mobile" />
                 </div>
                 <div class="image">
                 <?php
@@ -73,6 +77,7 @@ use Elementor\Plugin;
             $image_html = '<img src="' . esc_attr($image_url) . '" alt="' . esc_attr(Control_Media::get_image_alt($image)) . '" />'; 
             $icon_url = TZ_TF_ELEMENTOR_URL . '/assets/img/foots_3.png';
             $icon_class = "d-none";
+            $icon_mb_url = TZ_TF_ELEMENTOR_URL . "/assets/img/foot_mb_{$i}.png";
             if($i == 5) {
                 $icon_class = "";
             }
@@ -80,6 +85,9 @@ use Elementor\Plugin;
             <div class="box box-<?php echo $i; ?>">
                 <div class="icon <?php echo $icon_class; ?>">
                     <img src="<?php echo $icon_url; ?>" alt="icon" />
+                </div>
+                <div class="icon-mobile">
+                    <img src="<?php echo $icon_mb_url; ?>" alt="icon-mobile" />
                 </div>
                 <div class="image">
                 <?php
