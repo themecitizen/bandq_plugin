@@ -87,4 +87,38 @@ $posts = new WP_Query( $args );
 		}
 		?>
 	</div>
+
+    <div class="list-posts-carousel">
+        <div class="carousel">
+        <?php
+        if ( $posts->have_posts() )
+        {
+            while ($posts->have_posts()) : $posts->the_post();
+                ?>
+                    <div class="post-info">
+                        <div class="image">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php
+                                $image_id = get_post_thumbnail_id();
+                                $image = wpf_get_image_custom_size_url( $image_id, 402, 268 );
+                                if ( $image )
+                                {
+                                 ?>
+                                 <img src="<?php echo $image; ?>" alt="feature-image" />
+                                 <?php
+                                }
+                                ?>
+                            </a>
+                        </div>
+                        <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+                        <div class="excerpt"><?php echo wp_trim_words( get_the_excerpt(), 50, '' ); ?></div>
+                    </div>
+                <?php
+			endwhile;
+			wp_reset_postdata();
+		}
+		?>
+        </div>
+	</div>
+
 </div>

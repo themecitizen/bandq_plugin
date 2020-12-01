@@ -3,6 +3,23 @@
     {
         'use strict';
 
+        var blogs = function ($scope, $) {
+            var $container = $scope.find('.band-blog-list');
+
+            if ($container.hasClass('layout-grid')) {
+                var $slide = $scope.find('.list-posts-carousel .carousel');
+                $slide.not('.slick-initialized').slick({
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    swipeToSlide: true,
+                    autoplay: false
+                });
+            }
+        }
+
         var testimonials = function ($scope, $) {
             var $container = $scope.find('.bandp-testimonial-container');
 
@@ -122,12 +139,14 @@
                 elementorFrontend.hooks.addAction('frontend/element_ready/bandq_team.default', teams);
                 elementorFrontend.hooks.addAction('frontend/element_ready/band_slider.default', slider);
                 elementorFrontend.hooks.addAction('frontend/element_ready/bandq_testimonial.default', testimonials);
+                elementorFrontend.hooks.addAction('frontend/element_ready/bandq_blog.default', blogs);
             }
             else {
                 elementorFrontend.hooks.addAction('frontend/element_ready/band_video_button.default', videoPopup );
                 elementorFrontend.hooks.addAction('frontend/element_ready/bandq_team.default', teams);
                 elementorFrontend.hooks.addAction('frontend/element_ready/band_slider.default', slider);
                 elementorFrontend.hooks.addAction('frontend/element_ready/bandq_testimonial.default', testimonials);
+                elementorFrontend.hooks.addAction('frontend/element_ready/bandq_blog.default', blogs);
             }
         });
 

@@ -133,7 +133,8 @@ class Band_Blog_Widget extends Widget_Base {
 				],
 				'default' => '#081734',
 				'selectors' => [
-					'{{WRAPPER}} .band-blog-list .list-posts .post-info h2 a' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .band-blog-list .list-posts .post-info h2 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .band-blog-list .list-posts-carousel .post-info h2 a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -149,7 +150,8 @@ class Band_Blog_Widget extends Widget_Base {
 				],
 				'default'   =>  '#081734',
 				'selectors' =>  [
-					'{{WRAPPER}} .band-blog-list .list-posts .post-info .excerpt' => 'color: {{VALUE}};'
+					'{{WRAPPER}} .band-blog-list .list-posts .post-info .excerpt' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .band-blog-list .list-posts-carousel .post-info .excerpt' => 'color: {{VALUE}};'
 				],
 			]
 		);
@@ -166,7 +168,8 @@ class Band_Blog_Widget extends Widget_Base {
 				'default'   =>  '#93c96f',
 				'separator' => 'before',
 				'selectors' =>  [
-					'{{WRAPPER}} .band-blog-list .list-posts .post-info .image' => 'border-bottom-color: {{VALUE}};'
+					'{{WRAPPER}} .band-blog-list .list-posts .post-info .image' => 'border-bottom-color: {{VALUE}};',
+					'{{WRAPPER}} .band-blog-list .list-posts-carousel .post-info .image' => 'border-bottom-color: {{VALUE}};'
 				],
 			]
 		);
