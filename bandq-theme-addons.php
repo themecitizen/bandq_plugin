@@ -23,6 +23,7 @@ define('TZ_TF_VERSION', '1.0.0');
 
 /** Include Elementor **/
 
+require TZ_TF_INC_PATH . 'template-tag.php';
 require TZ_TF_ELEMENTOR_PATH . 'utils.php';
 require TZ_TF_ELEMENTOR_PATH . 'elementor.php';
 TZ_Elementor_Widgets::instance();
