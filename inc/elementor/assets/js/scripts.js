@@ -40,7 +40,6 @@
         var videoPopup = function ( $scope, $ )
         {
             $scope.find( '.play-link' ).magnificPopup({
-                disableOn: 700,
                 type: 'iframe',
                 mainClass: 'mfp-fade',
                 removalDelay: 160,
